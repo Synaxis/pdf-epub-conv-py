@@ -3,6 +3,8 @@ import sys
 from pdf2docx import Converter
 import pypandoc
 
+pypandoc.download_pandoc()
+
 def convert_pdf_to_docx(input_pdf, output_docx):
     cv = Converter(input_pdf)
     cv.convert(output_docx, start=0, end=None)
